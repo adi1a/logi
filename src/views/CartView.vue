@@ -7,7 +7,7 @@
     </div>
 
     <div v-else>cart is empty</div>
-
+    <!-- <div class="cartQuantity"><p>Кол-во: </p>{{ $store.state.cart.length }}</div> -->
   </div>
 </template>
 
@@ -32,6 +32,7 @@
 
       this.products = productsInStore.filter((product) => cartInStore.find((productId) => productId === product.id))
       
+      // this.$set(this.$store.state, 'quantuty',1)
     }
   })
 </script>

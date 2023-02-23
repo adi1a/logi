@@ -34,7 +34,21 @@ export default new Vuex.Store({
   },
   mutations: {
     addToCart(state, productId) {
-      state.cart.push(productId)
+      let cart = state.cart;
+      if (cart.length === 0) {
+        state.cart.push(productId)
+      }else{
+        if (cart.includes(productId)){
+          cart.forEach((id:number) =>{
+            if(id === productId){
+              alert('Вы уже добавляли товар в корзину')
+            }
+          });
+        }else{
+          cart.push(productId);
+        }
+      }
+      
     }
   },
   actions: {

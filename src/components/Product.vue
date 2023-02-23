@@ -6,10 +6,12 @@
 
         <div class="product__title">{{ product.title }}</div>
 
-        <div class="product__actions">
-            <button @click="putInCartAction">Put in cart</button>
+        <div class="product__actions" >
+            <button @click="putInCartAction" >Put in cart</button>
         </div>
+        
     </div>
+    
 </template>
 
 <script lang="ts">
